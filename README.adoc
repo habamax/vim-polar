@@ -1,0 +1,150 @@
+= POLAR: vim colorscheme
+:experimental:
+:icons: font
+:autofit-option:
+:!source-linenums-option:
+:imagesdir: images
+
+
+* No fancy background, pure white is here.
+* Use GUI or terminal with `set termguicolors` for authentic colors. Looks OK
+  though in terminals with standard 256 color palette.
+* No syntax with bold or italic, except Title and Directory are bold.
+* No plugin syntax setup -- only built-ins are highlighted. Waiting for https://github.com/vim/vim/issues/4405[this vim issue] is resolved.
+* Simple.
+* Or do you want black background? Check link:https://github.com/habamax/vim-habanight[habanight].
+
+
+== More than 1000 words
+
+
+image::https://user-images.githubusercontent.com/234774/90312170-f9182e80-df0a-11ea-9313-6004324392e8.png[]
+
+image::https://user-images.githubusercontent.com/234774/90312194-1947ed80-df0b-11ea-9dfc-c2f395f0efe5.png[]
+
+image::https://user-images.githubusercontent.com/234774/90312264-a8ed9c00-df0b-11ea-87d4-a8647d9dc5c9.png[]
+
+image::https://user-images.githubusercontent.com/234774/90312279-ca4e8800-df0b-11ea-924a-e7c77f719a19.png[]
+
+image::https://user-images.githubusercontent.com/234774/90312287-dfc3b200-df0b-11ea-8086-263f557b5db2.png[]
+
+image::https://user-images.githubusercontent.com/234774/90312320-2addc500-df0c-11ea-991c-0dabf6e6f850.png[]
+
+
+== Installation
+
+
+Using plugin manager::
+    Follow your plugin manager documentation, for example, link:https://github.com/junegunn/vim-plug[vim-plug] does it this way:
++
+[source,vim]
+------------------------------------------------------------------------------
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'habamax/vim-polar'
+
+" ... other plugins ...
+
+" Initialize plugin system
+call plug#end()
+
+set termguicolors
+colorscheme polar
+------------------------------------------------------------------------------
+
+Manual with git::
+    Clone this repo to your vim/nvim packages directory:
++
+.Vim on Linux or OSX
+[source,sh]
+------------------------------------------------------------------------------
+git clone https://github.com/habamax/vim-polar ~/.vim/pack/plugins/start/vim-polar
+------------------------------------------------------------------------------
++
+.Neovim on Linux or OSX
+[source,sh]
+------------------------------------------------------------------------------
+git clone https://github.com/habamax/vim-polar ~/.config/nvim/pack/plugins/start/vim-polar
+------------------------------------------------------------------------------
++
+.Vim on Windows
+[source,sh]
+------------------------------------------------------------------------------
+git clone https://github.com/habamax/vim-polar C:/Users/USERNAME/vimfiles/pack/plugins/start/vim-polar <.>
+------------------------------------------------------------------------------
++
+.Neovim on Windows
+[source,sh]
+------------------------------------------------------------------------------
+git clone https://github.com/habamax/vim-polar C:/Users/USERNAME/AppData/Local/nvim/pack/plugins/start/vim-polar <.>
+------------------------------------------------------------------------------
+<.> Change `USERNAME` to your user name
+
+
+Manual::
+    * Download zip archive (available in menu:Code[Download ZIP])
+    * Extract `colors/polar.vim` file into your vim/nvim settings directory
+        ** `~/.vim/colors/polar.vim` -- vim (linux, osx)
+        ** `~/vimfiles/colors/polar.vim` -- vim (windows)
+        ** `~/.config/nvim/colors/polar.vim` -- neovim (linux, osx)
+        ** `~/AppData/Local/nvim/colors/polar.vim` -- neovim (windows)
+
+add to your settings:
+
+[source,vim]
+------------------------------------------------------------------------------
+set termguicolors
+colorscheme polar
+------------------------------------------------------------------------------
+
+
+== Looks good but I want italic comments
+
+Add following to your settings file:
+
+[source,vim]
+------------------------------------------------------------------------------
+
+augroup colorscheme_change | au!
+    au ColorScheme polar hi Comment gui=italic cterm=italic
+augroup END
+
+set termguicolors
+colorscheme polar
+
+------------------------------------------------------------------------------
+
+
+== And bold statements
+
+Add following to your settings file:
+
+[source,vim]
+------------------------------------------------------------------------------
+
+func! s:polar_setup() abort
+    hi Comment gui=italic cterm=italic
+    hi Statement gui=bold cterm=bold
+endfunc
+
+augroup colorscheme_change | au!
+    au ColorScheme polar call s:polar_setup()
+augroup END
+
+set termguicolors
+colorscheme polar
+
+------------------------------------------------------------------------------
+
+== What about terminals with semi-transparent backgrounds?
+
+Add this:
+
+[source,vim]
+------------------------------------------------------------------------------
+let g:polar_transp_bg = v:true
+------------------------------------------------------------------------------
+
+image::https://user-images.githubusercontent.com/234774/90312365-96c02d80-df0c-11ea-9637-280cd68774b0.png[]
+

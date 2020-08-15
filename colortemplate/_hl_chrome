@@ -1,0 +1,73 @@
+# vim: ft=colortemplate
+# Highlight group definitions
+
+#if get(g:, '@optionprefix_transp_bg', 0)
+Normal           fg0    none
+#else
+Normal           fg0    bg0
+#endif
+
+EndOfBuffer      bg1   none
+Statusline       fg0    bg1
+StatuslineNC     grey   bg1
+StatuslineTerm   fg0    bg1
+StatuslineTermNC grey   bg1
+VertSplit        bg1    bg1
+
+Pmenu            none   bg1
+PmenuSel         bg0    yellow
+PmenuSbar        none   bg1
+PmenuThumb       none   grey
+
+TabLine          none   bg1
+TabLineFill      none   bg1
+TabLineSel       none   bg0
+
+ToolbarLine      bg0    visual
+ToolbarButton    none   visual bold
+
+NonText          bg1    none
+SpecialKey       bg1    none
+
+Folded           grey   folded
+Visual           none   visual
+VisualNOS        none   grey
+LineNr           grey   none
+FoldColumn       grey   none
+CursorLine       none   folded
+CursorColumn     none   folded
+CursorLineNr     none   folded
+QuickFixLine     none   folded
+SignColumn       none   none
+
+Underlined       blue   none underline
+
+Error            bg0    error
+ErrorMsg         bg0    error
+WarningMsg       yellow bg0
+MoreMsg          fg0    bg0
+ModeMsg          fg0    bg0
+Question         green  none
+
+Todo             fg0    todo
+MatchParen       bg0    aqua
+Search           bg0    yellow
+IncSearch        bg0    green
+WildMenu         bg0    yellow
+ColorColumn      none   folded
+Cursor           bg0    fg0
+lCursor          fg0    orange
+
+DiffAdd          none   diff1
+DiffChange       none   diff2
+DiffText         none   diff3
+DiffDelete       grey   diff4
+
+SpellBad         red    none t=underline g=undercurl s=red
+SpellCap         green  none t=underline g=undercurl s=green
+SpellLocal       aqua   none t=underline g=undercurl s=aqua
+SpellRare        purple none t=underline g=undercurl s=purple
+
+
+Term colors: bg0  red green yellow blue purple aqua bg1
+Term colors: grey red green yellow blue purple aqua fg0
