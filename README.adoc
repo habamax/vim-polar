@@ -6,6 +6,7 @@
 :imagesdir: images
 
 
+* Built using awesome https://github.com/lifepillar/vim-colortemplate[Toolkit for Vim Color Scheme Designers!]
 * No fancy background, pure white is here.
 * Use GUI or terminal with `set termguicolors` for authentic colors. Looks OK
   though in terminals with standard 256 color palette.
