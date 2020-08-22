@@ -138,6 +138,30 @@ colorscheme polar
 
 ------------------------------------------------------------------------------
 
+
+== And VertSplit without background colors
+
+Add following to your settings file:
+
+[source,vim]
+------------------------------------------------------------------------------
+
+func! s:polar_setup() abort
+    hi Comment gui=italic cterm=italic
+    hi Statement gui=bold cterm=bold
+    hi VertSplit guibg=NONE ctermbg=NONE
+endfunc
+
+augroup colorscheme_change | au!
+    au ColorScheme polar call s:polar_setup()
+augroup END
+
+set termguicolors
+colorscheme polar
+
+------------------------------------------------------------------------------
+
+
 == What about terminals with semi-transparent backgrounds?
 
 Add this:
