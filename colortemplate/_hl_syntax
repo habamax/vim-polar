@@ -1,5 +1,5 @@
-# vim: ft=colortemplate
-# Syntax color definitions
+; vim: ft=colortemplate
+; Syntax color definitions
 
 Identifier       blue   none
 Statement        red    none

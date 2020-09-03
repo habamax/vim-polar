@@ -1,4 +1,4 @@
-# vim: ft=colortemplate
+; vim: ft=colortemplate
 Full name: polar
 Short name: polar
 Description: White background colorscheme
@@ -10,7 +10,7 @@ Variant:    gui 256
 
 Background: light
 
-# Color palette
+; Color palette
 Color: grey   #777887 243
 Color: red    #ca1243 161
 Color: green  #2a871f 28
