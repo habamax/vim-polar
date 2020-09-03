@@ -27,7 +27,7 @@ Color: bg0    #ffffff 231
 Color: bg1    #cacbcc 251
 Color: folded #e0e4e4 254
 Color: visual #d0d9ea 153
-Color: error  #e07070 167
+Color: error  #d70000 160
 Color: todo   #e0e070 185
 Color: diff1  #c9f9c9 194
 Color: diff2  #f9f9c9 230
