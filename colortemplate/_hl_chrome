@@ -24,7 +24,7 @@ PmenuSel         bg0    yellow
 PmenuSbar        none   bg1
 PmenuThumb       none   grey
 
-TabLine          none   bg1
+TabLine          grey   bg1
 TabLineFill      none   bg1
 TabLineSel       none   bg0
 
