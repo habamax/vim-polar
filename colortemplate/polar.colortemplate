@@ -34,5 +34,100 @@ Color: diffchange #f9f9c9 230
 Color: difftext   #f9d999 222
 Color: diffdelete #f9c9c9 224
 
-Include: _hl_chrome
-Include: _hl_syntax
+
+;;; chrome
+
+Variant: gui
+#if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
+Variant: 256
+#if get(g:, '@optionprefix_transp_bg', 0)
+Variant: gui 256
+Normal           fg0        none
+#else
+Normal           fg0        bg0
+#endif
+
+EndOfBuffer      bg1        none
+Statusline       fg0        bg1
+StatuslineNC     comment    bg1
+StatuslineTerm   fg0        bg1
+StatuslineTermNC comment    bg1
+VertSplit        bg1        bg1
+
+Pmenu            none       bg1
+PmenuSel         bg0        preproc
+PmenuSbar        none       bg1
+PmenuThumb       none       comment
+
+TabLine          comment    bg1
+TabLineFill      none       bg1
+TabLineSel       none       bg0
+
+ToolbarLine      bg0        folded
+ToolbarButton    none       visual bold
+
+NonText          bg1        none
+SpecialKey       bg1        none
+
+Folded           comment    folded
+Visual           none       visual
+VisualNOS        none       comment
+LineNr           comment    none
+FoldColumn       comment    none
+CursorLine       none       folded
+CursorColumn     none       folded
+CursorLineNr     none       folded
+QuickFixLine     none       folded
+SignColumn       none       none
+
+Underlined       identifier none   underline
+
+Error            error      bg0
+ErrorMsg         error      bg0
+WarningMsg       preproc    bg0
+MoreMsg          fg0        bg0
+ModeMsg          fg0        bg0
+Question         string     none
+
+Todo             fg0        todo
+MatchParen       bg0        special
+Search           bg0        preproc
+IncSearch        bg0        string
+WildMenu         bg0        preproc
+ColorColumn      none       folded
+Cursor           bg0        fg0
+lCursor          fg0        constant
+
+DiffAdd          none       diffadd
+DiffChange       none       diffchange
+DiffText         none       difftext
+DiffDelete       comment    diffdelete
+
+SpellBad         statement  none   t=underline g=undercurl s=statement
+SpellCap         string     none   t=underline g=undercurl s=string
+SpellLocal       special    none   t=underline g=undercurl s=special
+SpellRare        type       none   t=underline g=undercurl s=type
+
+
+Term colors: bg0     statement string preproc identifier type special bg1
+Term colors: comment statement string preproc identifier type special fg0
+
+
+;;; syntax
+
+Identifier identifier none
+Statement  statement  none
+Constant   constant   none
+String     string     none
+PreProc    preproc    none
+Special    special    none
+Tag        preproc    none
+Delimiter  delimiter  none
+Type       type       none
+Operator   preproc    none
+Directory  identifier none bold
+Comment    comment    none
+Conceal    comment    none
+Ignore     none       none
+
+Title      statement  none bold
