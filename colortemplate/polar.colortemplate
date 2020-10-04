@@ -12,7 +12,7 @@ Background: light
 
 
 ; Color palette
-Color: comment    #777887 243
+Color: comment    #808080 244
 Color: constant   #d75f00 166
 Color: string     #2a871f 28
 Color: identifier #2f6aea 27
@@ -28,7 +28,6 @@ Color: bg1        #cacbcc 251
 Color: folded     #e0e4e4 254
 Color: visual     #d0d9ea 153
 Color: error      #d70000 160
-Color: todo       #e0e070 185
 Color: diffadd    #c9f9c9 194
 Color: diffchange #f9f9c9 230
 Color: difftext   #f9d999 222
@@ -64,7 +63,7 @@ TabLineFill      none       bg1
 TabLineSel       none       bg0
 
 ToolbarLine      bg0        folded
-ToolbarButton    none       visual bold
+ToolbarButton    none       bg1 bold
 
 NonText          bg1        none
 SpecialKey       bg1        none
@@ -89,7 +88,7 @@ MoreMsg          fg0        bg0
 ModeMsg          fg0        bg0
 Question         string     none
 
-Todo             fg0        todo
+Todo             bg0        comment
 MatchParen       bg0        special
 Search           bg0        preproc
 IncSearch        bg0        string
