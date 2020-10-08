@@ -94,7 +94,7 @@ MatchParen       bg0        special
 Search           bg0        preproc
 IncSearch        bg0        string
 WildMenu         bg0        preproc
-ColorColumn      none       folded
+ColorColumn      none       cursorline
 Cursor           bg0        fg0
 lCursor          fg0        constant
 
