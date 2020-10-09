@@ -77,7 +77,7 @@ FoldColumn       comment    none
 CursorLine       none       cursorline
 CursorColumn     none       cursorline
 CursorLineNr     none       cursorline
-QuickFixLine     none       cursorline
+QuickFixLine     none       folded
 SignColumn       none       none
 
 Underlined       identifier none   underline
