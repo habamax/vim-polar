@@ -145,3 +145,4 @@ gitCommitSummary     -> Title
 cocErrorSign         -> Type
 diffAdded            -> String
 diffRemoved          -> Error
+asciidoctorOption    -> Comment
