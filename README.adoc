@@ -11,9 +11,9 @@
 * Use GUI or terminal with `set termguicolors` for authentic colors. Looks OK
   though in terminals with standard 256 color palette.
 * No syntax with bold or italic, except Title and Directory are bold.
-* No plugin syntax setup -- only built-ins are highlighted. Waiting for https://github.com/vim/vim/issues/4405[this vim issue] is resolved.
 * Simple.
 * Or do you want black background? Check link:https://github.com/habamax/vim-habanight[habanight].
+* Like dark gruvbox colors? Check link:https://github.com/habamax/vim-gruvbit[gruvbit].
 
 
 == More than 1000 words
