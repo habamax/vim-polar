@@ -145,4 +145,5 @@ gitCommitSummary     -> Title
 cocErrorSign         -> Type
 diffAdded            -> String
 diffRemoved          -> Error
-asciidoctorOption    -> Comment
+asciidoctorOption     comment none
+SelectDirectoryPrefix comment none
