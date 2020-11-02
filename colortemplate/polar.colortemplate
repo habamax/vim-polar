@@ -30,8 +30,7 @@ Color: cursorline #f4f4f4 254
 Color: visual     #d0d9ea 153
 Color: error      #d70000 160
 Color: diffadd    #c9f9c9 194
-Color: diffchange #f9f9c9 230
-Color: difftext   #f9d999 222
+Color: difftext   #f9f9c9 222
 Color: diffdelete #f9c9c9 224
 
 
@@ -99,9 +98,9 @@ Cursor           bg0        fg0
 lCursor          fg0        constant
 
 DiffAdd          none       diffadd
-DiffChange       none       diffchange
+DiffChange       none       none
 DiffText         none       difftext
-DiffDelete       comment    diffdelete
+DiffDelete       diffdelete none
 
 SpellBad         statement  none   t=underline g=undercurl s=statement
 SpellCap         string     none   t=underline g=undercurl s=string
